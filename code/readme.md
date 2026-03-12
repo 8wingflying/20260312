@@ -4,14 +4,16 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
-
+```
 # 1. 載入資料集
+```python
 iris = load_iris()
 # 將資料轉換為 Pandas DataFrame 方便操作
 df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
 # 加入品種標籤
 df['species'] = [iris.target_names[i] for i in iris.target]
-
+```
+```python
 # 2. 基本統計描述 (集中趨勢與離散程度)
 print("--- 總體描述性統計 ---")
 print(df.describe())
