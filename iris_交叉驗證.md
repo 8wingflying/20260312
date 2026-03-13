@@ -1,4 +1,24 @@
-## 交叉驗證
+## Holdout(保留)交叉驗證(train_test_split)
+```python
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+
+# Load the iris dataset
+iris = load_iris()
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, test_size=0.3)
+
+# Train a k-nearest neighbors classifier on the training set
+knn = KNeighborsClassifier(n_neighbors=5)
+knn.fit(X_train, y_train)
+
+# Evaluate the performance of the classifier on the testing set
+score = knn.score(X_test, y_test)
+print('Accuracy:', score)
+```
+## 其他交叉驗證
 ```python
 from sklearn.datasets import load_iris
 from sklearn.model_selection import cross_val_score, KFold, StratifiedKFold, LeaveOneOut
