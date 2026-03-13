@@ -1,5 +1,6 @@
 ## 鐵達尼號資料集（Titanic Dataset） 
 - 鐵達尼號資料集（Titanic Dataset）是機器學習領域中最經典的入門資料集之一，通常託管於 Kaggle 平台。
+- [Titanic Dataset - Kaggle](https://www.kaggle.com/datasets/smirkxd/titanic-dataset)
 - 它的核心任務是根據乘客的個人資訊（如年齡、性別、艙等），預測該乘客是否在 1912 年的船難中生存。
 - 這個資料集非常適合練習資料清洗（Data Cleaning）、**特徵工程（Feature Engineering）以及分類模型（Classification）**的實作。
 
