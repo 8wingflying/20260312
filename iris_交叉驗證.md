@@ -32,7 +32,7 @@ print(f"\nLOOCV 平均準確率: {loo_scores.mean():.4f}")
 print(f"總共訓練次數: {len(loo_scores)}")
 ```
 
-## Shuffle-Split 
+## Shuffle-Split 交叉驗證
 ```python
 from sklearn.datasets import load_iris
 from sklearn.model_selection import ShuffleSplit, cross_val_score
