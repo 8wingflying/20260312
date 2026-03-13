@@ -36,3 +36,54 @@
   - Name 稱謂： 提取出 Mr, Mrs, Miss, Master。例如，Master 通常代表年幼男孩，其生存率高於一般的 Mr。
   - 孤身一人 (IsAlone)： 如果 SibSp + Parch == 0，則標記為獨自乘船。數據顯示，獨自乘船者的死亡率通常較高。
   - 票價分箱 (Fare Binning)： 票價分佈極度偏態（少數人付了極高額票價），將其分段處理有助於模型收斂。
+
+## 程式
+```python
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 1. 載入資料 (假設檔案名為 titanic.csv)
+# 或者直接從 seaborn 載入內建資料集
+df = sns.load_dataset('titanic')
+
+# 設定繪圖風格
+sns.set_theme(style="whitegrid")
+
+# --- 圖表 A：缺失值視覺化 ---
+plt.figure(figsize=(10, 6))
+sns.heatmap(df.isnull(), yticklabels=False, cbar=False, cmap='viridis')
+plt.title('Missing Data Heatmap (Yellow shows Missing)')
+plt.show()
+
+# --- 圖表 B：生存與性別的關係 ---
+plt.figure(figsize=(8, 5))
+sns.countplot(x='survived', hue='sex', data=df, palette='RdBu_r')
+plt.title('Survival Count by Sex')
+plt.xlabel('Survived (0 = No, 1 = Yes)')
+plt.show()
+
+# --- 圖表 C：生存與艙等 (Pclass) 的關係 ---
+plt.figure(figsize=(8, 5))
+sns.countplot(x='survived', hue='pclass', data=df, palette='rainbow')
+plt.title('Survival Count by Passenger Class')
+plt.xlabel('Survived (0 = No, 1 = Yes)')
+plt.show()
+
+# --- 圖表 D：年齡分佈與生存率 ---
+plt.figure(figsize=(10, 6))
+sns.histplot(data=df, x='age', hue='survived', kde=True, element="step", palette='magma')
+plt.title('Age Distribution by Survival Status')
+plt.xlabel('Age')
+plt.show()
+
+# --- 圖表 E：相關係數矩陣 (Heatmap) ---
+plt.figure(figsize=(10, 8))
+# 僅篩選數值型欄位進行運算
+numeric_df = df.select_dtypes(include=[np.number])
+sns.heatmap(numeric_df.corr(), annot=True, cmap='coolwarm', fmt='.2f')
+plt.title('Correlation Matrix of Features')
+plt.tight_layout()
+plt.show()
+```
