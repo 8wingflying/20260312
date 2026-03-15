@@ -9,4 +9,15 @@
 - `感知機` perceptron模型
   - 激活函數 Activation function f(z)
   - 模型參數(不是`超參數`):W(權重)  b(bias偏差值) <==演算法訓練的
-- MLP 
+  - XOR PROBLEM ==>`多層`感知機 `Multilayer` perceptron, MLP ==> 有中間層(Hidden Layer)
+- `機器` `學習`
+  - 誤差函數(Error function) ==> 誤差函數`最小化` ==> 演算法==Gradient Descent`梯度`下降(負號)法
+    - 模型`參數`(Parameters):Weight(權重) Bias(偏差值) <==演算法訓練的
+    - 模型`超參數`(Hyperparameter): η = 學習率(learning rate) 正數, 約取0.1~0.3 事先要給定的
+  - 每一輪的[w,b]參數更新 ==>Gradient Descent`梯度`下降(負號)法
+    - (誤差)backpropagation`反向`傳播
+    - Forward propagation(正向傳播)
+ 
+ 
+
+
