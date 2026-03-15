@@ -4,7 +4,7 @@
 - GenAI
 - `深度`強化學習(`Deep` Q-learning) <==強化學習(Q-learning)
 
-## 神經網路
+## 神經網路 1: `感知機` perceptron模型 ==> `多層`感知機 `Multilayer` perceptron, MLP
 - NN(neural network)
 - `感知機` perceptron模型
   - 激活函數 Activation function f(z)
@@ -19,9 +19,10 @@
     - Forward propagation(正向傳播)
  - MLP應用
    - https://github.com/8wingflying/20260312/blob/main/code/MLP.md
-   - 分類問題 ==> iris
-   - regression  問題 ==> Boston| 加州房價預測問題
-   
+   - 分類(Classification)問題 ==> iris (三元分類)
+   - 迴歸(regression)問題 ==> Boston| 加州房價預測問題
+ 
+ ## 神經網路 2: Deep Learning
  
 
 
