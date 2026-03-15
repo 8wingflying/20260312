@@ -22,7 +22,13 @@
    - 分類(Classification)問題 ==> iris (三元分類)
    - 迴歸(regression)問題 ==> Boston| 加州房價預測問題
  
- ## 神經網路 2: Deep Learning
- 
+## 神經網路 2: Deep Learning| CNN
+## 神經網路 3: Deep Learning| RNN ==> Transformer
+
+# 主題導向
+- 電腦視覺(Computer vision)
+- NLP自然語言處理|Natural Language Processing
+- GenAI
+- `深度`強化學習(`Deep` Q-learning) <==強化學習(Q-learning)
 
 
