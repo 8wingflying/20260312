@@ -8,5 +8,5 @@
 - NN(neural network)
 - `感知機` perceptron模型
   - 激活函數 Activation function f(z)
-  - 模型參數(不是`超參數`):W(權重)  b(bias偏差值)
+  - 模型參數(不是`超參數`):W(權重)  b(bias偏差值) <==演算法訓練的
 - MLP 
