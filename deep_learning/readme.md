@@ -6,3 +6,6 @@
 
 ## 神經網路
 - NN(neural network)
+- `感知機` perceptron模型
+  - 模型參數:W(權重)  b(bias偏差值)
+- MLP 
