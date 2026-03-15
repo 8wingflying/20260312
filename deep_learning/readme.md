@@ -17,7 +17,11 @@
   - 每一輪的[w,b]參數更新 ==>Gradient Descent`梯度`下降(負號)法
     - (誤差)backpropagation`反向`傳播
     - Forward propagation(正向傳播)
- 
+ - MLP應用
+   - https://github.com/8wingflying/20260312/blob/main/code/MLP.md
+   - 分類問題 ==> iris
+   - regression  問題 ==> Boston| 加州房價預測問題
+   
  
 
 
